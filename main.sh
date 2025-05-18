@@ -3,7 +3,7 @@ version=`python3 taptap.py`
 if [ "$version" = `cat version.txt` ]
 then
 	echo "No update"
-	exit
+	# exit
 fi
 sudo apt-get install libvorbisenc2
 pip install UnityPy~=1.10.0
