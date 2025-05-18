@@ -1,4 +1,4 @@
-set -e
+# set -e
 version=`python3 taptap.py`
 if [ "$version" = `cat version.txt` ]
 then
