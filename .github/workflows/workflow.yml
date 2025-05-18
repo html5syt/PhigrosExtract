@@ -5,11 +5,11 @@ on:
 jobs:
   Phigros:
     runs-on: ubuntu-22.04
-    env:
-      SUPER_SECRET: ${{ secrets.PERS }}
     steps:
-    - run: |
-        git config --global user.name 'GithubAction'
-        git config --global user.email 'seed@gmail.com'
-        git clone https://$SUPER_SECRET@github.com/7aGiven/PhigrosExtract .
-    - run: sh main.sh $SUPER_SECRET
+    - run: sh main.sh
+    
+    - name: Archive output
+      uses: actions/upload-artifact@v4
+      with:
+        name: Phigros
+        path: ./
