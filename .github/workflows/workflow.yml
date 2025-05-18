@@ -6,6 +6,9 @@ jobs:
   Phigros:
     runs-on: ubuntu-22.04
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
     - run: sh main.sh
     
     - name: Archive output
